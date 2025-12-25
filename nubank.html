@@ -1,125 +1,143 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-        <style>
-            body{
-                margin: 0px;
-            }
-            .container {
-                display: flex;
-                flex-direction: column;
-                width: 378px;
-                height: 235px;
-                background-color: rgb(144, 18, 175);
-                margin: 150px auto;
-                border-radius: 12px;
-                align-items: center;
-            }
+<header>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0px;
+        }
 
-            .container .top {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                border-radius: 10px;
-            }
-            .container .top div {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-right: 10px;
-                position: relative;
-            }
-            .container .top div div{
-                width: 45px;
-                height: 45px;
-                border-radius: 22.5px;
-                background-color: #f79e1b;
-                margin-right: 0px;
-                mix-blend-mode: hard-light;
-                
-            }
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 378px;
+            height: 235px;
+            background-color: rgb(144, 18, 175);
+            margin: 150px auto;
+            border-radius: 12px;
+            align-items: center;
+        }
 
-            .container .top div div:last-child {
-                position: absolute;
-                left: -30px;
-                top: 0px;
-                background-color: rgb(255, 0, 0);
-                /* opacity: .7; */
-            }
+        .container .top {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-right: 20px;
+        }
 
-            .container .middle {
-                width: 100%;
-                height: 100%;
-                border-radius: 8px;
-            }
+        .mastercard-icon {
+            display: inline-block;
+            height: 50px;
+            isolation: isolate;
+            position: relative;
+            line-height: 5px;
+            vertical-align: middle;
+            width: 65px;
+        }
 
-            .container .middle div {
-                display: flex;
-                align-items: center;
-            }
+        .mastercard-icon::before,
+        .mastercard-icon::after {
+            border-radius: 50%;
+            content: "";
+            display: inline-block;
+            height: 40px;
+            position: absolute;
+            width: 40px;
+        }
 
-            .container .middle img {
-                width: 50px;
-                height: 50px;
-                margin-left: 20px;
-            }
+        .mastercard-icon::before {
+            background-color: #eb001b;
+            left: 0;
+            top: 0;
+        }
 
-            .container .middle svg {
-                width: 35px;
-                height: 35px;
-                margin-left: 0px;
-                transform: rotate(90deg);
-                
-            }
+        .mastercard-icon::after {
+            background-color: #f79e1b;
+            mix-blend-mode: hard-light;
+            right: 0;
+            top: 0;
+        }
 
-            .container .bottom {
-                width: 100%;
-                height: 100%;
-                border-radius: 8px;
-                display: flex;
-                align-items: center;
-            }
+        .container .middle {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
 
-            .container .bottom img{
-                width: 60px;
-                height: 40px;
-                margin-left: 20px;
-            }
+        .container .middle div {
+            display: flex;
+            align-items: center;
+        }
 
-            .container .bottom p{
-                font-size: 20px;
-                color: #ffffff;
-                margin-left: 10px;
-                font-family: 'Roboto', sans-serif;
-            }
+        .container .middle img {
+            width: 50px;
+            height: 50px;
+            margin-left: 20px;
+        }
 
-        </style>
-    </header>
-    <body>
-        <div class="container">
-            <div class="top">
-                <div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-            <div class="middle">
-                <div>
-                    <img src="https://img.icons8.com/officel/80/000000/sim-card-chip.png"/>
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                    width="50" height="50"
-                    viewBox="0 0 172 172"
-                    style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,37.625c-26.95898,0 -51.29346,11.19092 -68.86719,29.05859l7.55859,7.55859c15.62109,-15.91504 37.31006,-25.86719 61.30859,-25.86719c23.99854,0 45.6875,9.95215 61.30859,25.86719l7.55859,-7.55859c-17.57373,-17.86768 -41.9082,-29.05859 -68.86719,-29.05859zM86,64.5c-19.56836,0 -37.18408,8.16748 -49.88672,21.16406l7.55859,7.55859c10.75,-11.04394 25.74121,-17.97266 42.32813,-17.97266c16.58692,0 31.57813,6.92871 42.32813,17.97266l7.55859,-7.55859c-12.70264,-12.99658 -30.31836,-21.16406 -49.88672,-21.16406zM86,91.375c-12.15674,0 -23.07471,5.14404 -30.90625,13.26953l7.55859,7.55859c5.87891,-6.17285 14.15137,-10.07812 23.34766,-10.07812c9.19629,0 17.46875,3.90528 23.34766,10.07813l7.55859,-7.55859c-7.81055,-8.12549 -18.74951,-13.26953 -30.90625,-13.26953zM86,118.25c-4.74511,0 -8.96533,2.09961 -11.92578,5.375l11.92578,11.92578l11.92578,-11.92578c-2.96045,-3.27539 -7.18066,-5.375 -11.92578,-5.375z"></path></g></g></svg>
-                </div>
-                
-            </div>
-            <div class="bottom" >
-                <img src="./assets/nubank.png" alt="">
-                <p>JOAO B R SOUSA</p>
-            </div>
+        .container .middle svg {
+            width: 35px;
+            height: 35px;
+            margin-left: 0px;
+            transform: rotate(90deg);
+
+        }
+
+        .container .bottom {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .container .bottom img {
+            width: 60px;
+            height: 40px;
+            margin-left: 20px;
+        }
+
+        .container .bottom p {
+            font-size: 20px;
+            color: #ffffff;
+            margin-left: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</header>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="mastercard-icon"></div>
         </div>
-    </body>
+        <div class="middle">
+            <div>
+                <img src="https://img.icons8.com/officel/80/000000/sim-card-chip.png" />
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 172 172"
+                    style=" fill:#000000;">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                        style="mix-blend-mode: normal">
+                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                        <g fill="#ffffff">
+                            <path
+                                d="M86,37.625c-26.95898,0 -51.29346,11.19092 -68.86719,29.05859l7.55859,7.55859c15.62109,-15.91504 37.31006,-25.86719 61.30859,-25.86719c23.99854,0 45.6875,9.95215 61.30859,25.86719l7.55859,-7.55859c-17.57373,-17.86768 -41.9082,-29.05859 -68.86719,-29.05859zM86,64.5c-19.56836,0 -37.18408,8.16748 -49.88672,21.16406l7.55859,7.55859c10.75,-11.04394 25.74121,-17.97266 42.32813,-17.97266c16.58692,0 31.57813,6.92871 42.32813,17.97266l7.55859,-7.55859c-12.70264,-12.99658 -30.31836,-21.16406 -49.88672,-21.16406zM86,91.375c-12.15674,0 -23.07471,5.14404 -30.90625,13.26953l7.55859,7.55859c5.87891,-6.17285 14.15137,-10.07812 23.34766,-10.07812c9.19629,0 17.46875,3.90528 23.34766,10.07813l7.55859,-7.55859c-7.81055,-8.12549 -18.74951,-13.26953 -30.90625,-13.26953zM86,118.25c-4.74511,0 -8.96533,2.09961 -11.92578,5.375l11.92578,11.92578l11.92578,-11.92578c-2.96045,-3.27539 -7.18066,-5.375 -11.92578,-5.375z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+        </div>
+        <div class="bottom">
+            <img src="./assets/nubank.png" alt="">
+            <p>JOAO B R SOUSA</p>
+        </div>
+    </div>
+</body>
+
 </html>
