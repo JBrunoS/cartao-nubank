@@ -5,6 +5,11 @@
     <style>
         body {
             margin: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            /* background: #999; */
         }
 
         .container {
@@ -105,6 +110,97 @@
             margin-left: 10px;
             font-family: 'Roboto', sans-serif;
         }
+
+        .login {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            align-self: center;
+            justify-self: center;
+        }
+
+        .login input {
+            display: block;
+            width: 400px;
+            height: 40px;
+            background: transparent;
+            border: solid 1px #ccc;
+            transition: all .3s ease;
+            padding: 0 15px
+        }
+
+        .login input:focus {
+            font-size: 11px;
+            border-color: #f79e1b;
+            outline: none;
+        }
+
+        .login label {
+            z-index: 1;
+            cursor: text;
+            position: absolute;
+            top: 4px;
+            left: 8px;
+            display: flex;
+            color: #999;
+            background: #ffffff;
+            padding: 0px 10px;
+            pointer-events: none;
+            transition: all .3s ease;
+        }
+
+        .login input:focus+label,
+        .login input:valid+label {
+            top: -10px;
+        }
+
+        .login input:focus + label{
+            color: #f79e1b;
+        }
+
+        .tag-list{
+            width: 400px;
+            position: relative;
+            overflow: hidden;
+            align-self: center;
+            justify-self: center;
+        }
+
+        .inner{
+            width: fit-content;
+            display: flex;
+            gap: 5px;
+            animation: loop 5s linear infinite;
+        }
+
+        .tag{
+            display: flex;
+            width: 90px;
+            height: 30px;
+            background: #ccc;
+            border-radius: 8px;
+            align-items: center;
+            justify-content: center;
+            padding: 8px;
+        }
+
+        .fade {
+            position: absolute;
+            background: linear-gradient(90deg, #fff, transparent 30%, transparent 70%, #fff);
+            inset: 0;
+            pointer-events: none;
+        }
+
+        @keyframes loop {
+            0% {
+                transform: translateX(0);
+            }
+
+            100%{
+                transform: translateX(-50%);
+            }
+        }
     </style>
 </header>
 
@@ -137,6 +233,36 @@
             <img src="./assets/nubank.png" alt="">
             <p>JOAO B R SOUSA</p>
         </div>
+    </div>
+
+    <input list="languages" placeholder="Select">
+    <datalist id="languages">
+        <option value="Java"></option>
+        <option value="JavaScript"></option>
+        <option value="Python"></option>
+        <option value="PHP"></option>
+    </datalist>
+
+    <div class="login">
+
+        <input type="password" id="login" required>
+        <label for="login">E-mail ou CPF</label>
+        <input type="checkbox" onclick="login.type = this.checked ? 'text' : 'password'">
+    </div>
+
+    <div class="tag-list">
+        <div class="inner">
+            <div class="tag"><span>#</span>CSS</div>
+            <div class="tag"><span>#</span>Java</div>
+            <div class="tag"><span>#</span>PHP</div>
+            <div class="tag"><span>#</span>JavaScript</div>
+            <div class="tag"><span>#</span>React</div>
+            <div class="tag"><span>#</span>CSS</div>
+            <div class="tag"><span>#</span>Java</div>
+            <div class="tag"><span>#</span>PHP</div>
+            <div class="tag"><span>#</span>JavaScript</div>
+        </div>
+        <div class="fade"></div>
     </div>
 </body>
 
